@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schulnoten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch" onclick="toggleDarkMode()">
+            <span class="slider" aria-label="sun-moon" role="img"></span>
+        </label>
+    </div>
+    <div id="sidebar">
+        <a href="#" class="subject-button" onclick="selectSubject('Mathe')">Mathe</a>
+        <a href="#" class="subject-button" onclick="selectSubject('Deutsch')">Deutsch</a>
+        <a href="#" class="subject-button" onclick="selectSubject('Englisch')">Englisch</a>
+    </div>
+    <div id="main">
+        <h1>Willkommen zu Schulnoten</h1>
+        <p>Wähle ein Fach aus der Seitenleiste.</p>
+        <div id="gradesFormContainer"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="login-container">
+            <h2>Anmeldung</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Benutzername:</label>
+                <input type="text" id="loginUsername" required>
+
+                <label for="loginPassword">Passwort:</label>
+                <input type="password" id="loginPassword" required>
+
+                <button type="submit">Anmelden</button>
+            </form>
+            <p id="loginMessage" class="error-message"></p>
+
+            <button id="registerButton" onclick="showRegistrationForm()">Registrieren</button>
+
+            <!-- Hier füge das Registrierungsformular hinzu -->
+            <div id="registrationFormContainer"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- Füge deine frontend.js Datei hinzu -->
+    <script src="frontend.js"></script>
+</body>
+</html>
